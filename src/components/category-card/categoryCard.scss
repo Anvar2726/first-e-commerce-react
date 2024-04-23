@@ -8,8 +8,15 @@
     line-height: 24px;
     padding: 20px 40px;
     cursor: pointer;
+    width: 130px;
 
     img{
         height: 50px;
+    }
+}
+
+@media (max-width: 1150px){
+    .category__card{
+        padding: 15px 30px;
     }
 }

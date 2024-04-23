@@ -6,7 +6,7 @@ import { CategoryContext } from '../../../../contexts/CategoryContext';
 import './category.scss';
 
 const Category = () => {
-    const { category } = useContext(CategoryContext)
+    const { category } = useContext(CategoryContext);
     return (
         <section className="category">
             <div className='container category__rows'>

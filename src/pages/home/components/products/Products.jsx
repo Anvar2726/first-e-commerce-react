@@ -26,8 +26,8 @@ const Products = () => {
                 {categories.map((category, i) => {
                     return (
                         <Fragment key={i}>
-                            <h1 className='products__title' key={i}>{category.name}</h1>
-                            <div className='products__products-rows'>
+                            <h1 id={`#${category.name}`} className='products__title' key={i}>{category.name}</h1>
+                            <div  className='products__products-rows'>
                                 {products.filter(el => el.category === category.name).map(pr => {
                                     return <ProductCard key={pr.id} {...pr} />
                                 })}

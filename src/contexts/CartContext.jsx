@@ -52,9 +52,17 @@ const CartContextProvider = ({ children }) => {
     }
     setCartProducts(newProducts);
   }
+  let totalPrice = 0;
+    const totalPriceProducts = () => {
+        cartProducts.map(el => {
+            totalPrice += parseInt(el.price) * parseInt(el.quantity)
+        })
+    }
+    totalPriceProducts()
 
-  const state = { cartProducts, addToCart, increaseQuantity, decreaseQuantity }
-    return (
+  const state = { cartProducts, addToCart, increaseQuantity, decreaseQuantity, totalPrice }
+  
+  return (
     <CartContext.Provider value={state}>
       {children}
     </CartContext.Provider>

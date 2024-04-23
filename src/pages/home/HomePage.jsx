@@ -7,6 +7,8 @@ const HomePage = () => {
     <Fragment>
         <Category/>
         <Products/>
+        <div className="container">
+        </div>
     </Fragment>
   )
 }

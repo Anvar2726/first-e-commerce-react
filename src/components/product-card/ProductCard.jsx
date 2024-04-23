@@ -1,14 +1,15 @@
 import { useContext } from 'react';
 
+import PropTypes from 'prop-types';
+
 import { CartContext } from '../../contexts/CartContext';
 
 import { LazyLoadImage } from 'react-lazy-load-image-component';
-import PropTypes from 'prop-types'
 
 import './productCard.scss';
 
 const ProductCard = ({ id, filter, image, name, description, price }) => {
-    const { addToCart, cartProducts, increaseQuantity, decreaseQuantity  } = useContext(CartContext);
+    const { addToCart, cartProducts, increaseQuantity, decreaseQuantity } = useContext(CartContext);
 
     const productInCart = cartProducts.find(el => el.id === id);
     return (
@@ -24,9 +25,9 @@ const ProductCard = ({ id, filter, image, name, description, price }) => {
                 <div>
                     {productInCart ?
                         <div className='productCard__btns'>
-                            <button onClick={()=> decreaseQuantity(id)}>-</button>
+                            <button onClick={() => decreaseQuantity(id)}>-</button>
                             <span>{productInCart.quantity}</span>
-                            <button onClick={()=> increaseQuantity(id)}>+</button>
+                            <button onClick={() => increaseQuantity(id)}>+</button>
                         </div>
                         :
                         <button onClick={() => addToCart(id)} className='productCard__btn'>
@@ -48,6 +49,9 @@ ProductCard.propTypes = {
     image: PropTypes.string,
     name: PropTypes.string,
     description: PropTypes.string,
-    price: PropTypes.string,
+    price: PropTypes.oneOfType([
+        PropTypes.string,
+        PropTypes.number,
+    ])
 }
 export default ProductCard

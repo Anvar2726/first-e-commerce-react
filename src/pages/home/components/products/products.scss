@@ -56,3 +56,33 @@
         gap: 30px;
     }
 }
+
+@media (max-width: 1320px){
+    .products{
+        &__products-rows {
+            grid-template-columns: repeat(3, 1fr);
+        } 
+    }
+}
+
+@media (max-width: 880px){
+    .products{
+        &__products-rows {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            grid-template-columns: repeat(2, 1fr);
+        } 
+    }
+}
+
+@media (max-width: 655px){
+    .products{
+        &__products-rows {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            grid-template-columns: repeat(2, 1fr);
+        } 
+    }
+}
