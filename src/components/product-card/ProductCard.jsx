@@ -22,7 +22,7 @@ const ProductCard = ({ id, filter, image, name, description, price }) => {
             <div className='productCard__infos'>
                 <h2 className='productCard__title'>{name}</h2>
                 <p className='productCard__text'>{description}</p>
-                <div>
+                <div className='productCard__inner-box'>
                     {productInCart ?
                         <div className='productCard__btns'>
                             <button onClick={() => decreaseQuantity(id)}>-</button>
