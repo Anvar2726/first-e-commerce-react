@@ -11,7 +11,7 @@ import './productCard.scss';
 const ProductCard = ({ id, filter, image, name, description, price }) => {
     const { addToCart, cartProducts, increaseQuantity, decreaseQuantity } = useContext(CartContext);
 
-    const productInCart = cartProducts.find(el => el.id === id);
+    const productInCart = cartProducts.find(el => el.id === id); 
     return (
         <div className='productCard'>
             {filter === "" ? <></> : <span className='productCard__span'>{filter}</span>}

@@ -5,7 +5,7 @@ import './categoryCard.scss';
 const CategoryCard = ({name, image}) => {
   return (
     <div className='category__card'> 
-        <img src={image} alt={name} />
+       <a href={`#${name}`}> <img src={image} alt={name} /></a>
         <p>{name}</p>
     </div>
   )

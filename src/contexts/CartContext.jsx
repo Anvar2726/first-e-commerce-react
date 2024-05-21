@@ -52,6 +52,7 @@ const CartContextProvider = ({ children }) => {
     }
     setCartProducts(newProducts);
   }
+  
   let totalPrice = 0;
     const totalPriceProducts = () => {
         cartProducts.map(el => {

@@ -29,7 +29,7 @@ const Products = () => {
                             <h1 id={`${category.name}`} className='products__title' key={i}>{category.name}</h1>
                             <div  className='products__products-rows'>
                                 {products.filter(el => el.category === category.name).map(pr => {
-                                    return <ProductCard key={pr.id} {...pr} />
+                                    return <ProductCard key={pr.id} {...pr} /> 
                                 })}
                             </div>
                         </Fragment>

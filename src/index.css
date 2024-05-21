@@ -42,6 +42,7 @@
   box-sizing: border-box;
   list-style: none;
   text-decoration: none;
+  scroll-behavior: smooth;
 }
 
 .container{
@@ -49,6 +50,7 @@
   width: 100%;
   margin: 0 auto;
   padding: 0 15px;
+
 }
 
 html{
@@ -58,6 +60,7 @@ html{
 body{
   overflow-x: hidden;
   background: rgb(229, 229, 229);
+  
 }
 
 #root{
